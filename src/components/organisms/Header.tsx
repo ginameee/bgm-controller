@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Box, Toolbar } from "@mui/material";
-import AddForm from "../molecules/AddForm";
+import AddForm from "./AddForm";
 import AppLogo from "../atoms/AppLogo";
 
 function Header() {

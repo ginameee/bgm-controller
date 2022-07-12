@@ -19,11 +19,16 @@ const styles = {
       height: `calc(100vh - ${this.header.height})`,
     };
   },
+  footer: {
+    position: "fixed",
+    width: "100%",
+    bottom: 0,
+  },
 };
 
 function MainTemplate({ header, main, footer }: IProps) {
   return (
-    <>
+    <Box>
       {header && (
         <Box component="header" sx={styles.header}>
           {header}
@@ -34,8 +39,12 @@ function MainTemplate({ header, main, footer }: IProps) {
           <Stack height="100%">{main}</Stack>
         </Box>
       )}
-      {footer && <Box component="footer">{footer}</Box>}
-    </>
+      {footer && (
+        <Box component="footer" sx={styles.footer}>
+          {footer}
+        </Box>
+      )}
+    </Box>
   );
 }
 
